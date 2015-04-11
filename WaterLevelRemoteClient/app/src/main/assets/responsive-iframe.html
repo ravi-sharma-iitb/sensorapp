@@ -1,12 +1,36 @@
 <!doctype html>
 <html>
 
+<style media="screen" type="text/css">
+    body {
+    margin:0;
+    padding:0;
+    background:#6666;
+    }
+    .panorama {
+    position:center;
+    padding-bottom:65.11627%;
+    height:0;
+    overflow:hidden;
+
+    }
+    .panorama iframe {
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    float:center;
+    }
+</style>
+
 <head>
-<meta charset="UTF-8">
-<title>responsive iframe</title>
+    <meta charset="UTF-8">
+    <title>responsive iframe</title>
 
 </head>
 <body>
-<iframe width="300" height="196" frameborder="0" src="http://app.ubidots.com/ubi/getchart/RJSiqgVC8dJuajGCj_Zjw6OOtwQ"></iframe>
+<div class=panorama>
+    <iframe style="border:0 width="430" height="280" frameborder="0" src="http://app.ubidots.com/ubi/getchart/RJSiqgVC8dJuajGCj_Zjw6OOtwQ"></iframe>
+</div>
 </body>
 </html>
