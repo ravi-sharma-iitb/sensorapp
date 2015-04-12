@@ -15,7 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
 
-public static final String DATABASE_NAME = "water_level";
+public static final String DATABASE_NAME = "wtrlvl";
 protected Context context;
 
     public DatabaseHelper(Context context) {
@@ -36,12 +36,12 @@ protected Context context;
                     db.execSQL(s);
                 }
             } catch (Throwable t) {
-                Toast.makeText(context, t.toString(), 50000).show();
+                Toast.makeText(context, t.toString(), 500000).show();
             }
         }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            db.execSQL("DROP TABLE IF EXISTS student");
+            db.execSQL("DROP TABLE IF EXISTS wtrlvl");
             onCreate(db);
         }
     }

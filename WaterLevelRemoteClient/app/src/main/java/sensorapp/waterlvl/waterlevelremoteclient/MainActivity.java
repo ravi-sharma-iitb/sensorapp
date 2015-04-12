@@ -1,9 +1,11 @@
 package sensorapp.waterlvl.waterlevelremoteclient;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -18,6 +20,12 @@ public class MainActivity extends ActionBarActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_asset/responsive-iframe.html");
+    }
+    public void dbclicked(View view) {
+        startActivity(new Intent(MainActivity.this, db.class));
+    }
+    public void addclicked(View view) {
+        startActivity(new Intent(MainActivity.this, add_sensor.class));
     }
 
     @Override
