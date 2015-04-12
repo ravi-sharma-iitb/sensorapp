@@ -32,7 +32,7 @@ public class db extends ActionBarActivity {
                 new String[]{"%" + searchText.getText().toString() + "%"});
         adapter = new SimpleCursorAdapter(
                 this,
-                R.layout.student_list_item,
+                R.layout.tank_list_item,
                 cursor,
                 new String[]{"TANK_NAME", "UID"},
                 new int[]{R.id.Tankname, R.id.UID});
