@@ -26,6 +26,10 @@
             android:name=".add_sensor"
             android:label="@string/title_activity_add_sensor" >
         </activity>
+        <activity
+            android:name=".Sensor_out"
+            android:label="@string/title_activity_sensor_out" >
+        </activity>
     </application>
 
 </manifest>
