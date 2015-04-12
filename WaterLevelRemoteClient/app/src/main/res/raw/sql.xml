@@ -1,0 +1,14 @@
+<sql>
+    <statement>
+        CREATE TABLE IF NOT EXISTS wtrlvl (
+        _id INTEGER PRIMARY KEY AUTOINCREMENT,
+        UID VARCHAR(50),
+        TANK_NAME VARCHAR(50),
+        )
+    </statement>
+
+
+<statement> INSERT INTO wtrlvl VALUES(1,'123','ravi sahrma')</statement>
+    <statement> INSERT INTO wtrlvl VALUES(2,'124','ravi sahffrma')</statement>
+    <statement> INSERT INTO wtrlvl VALUES(3,'125','ravi sahwfwwrma')</statement>
+</sql>
