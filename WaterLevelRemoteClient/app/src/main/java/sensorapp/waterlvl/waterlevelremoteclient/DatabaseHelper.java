@@ -26,7 +26,7 @@ protected Context context;
         public void onCreate(SQLiteDatabase db) {
             String s;
             try {
-                Toast.makeText(context, "1", 2000).show();
+
                 InputStream in = context.getResources().openRawResource(R.raw.sql);
                 DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
                 Document doc = builder.parse(in, null);

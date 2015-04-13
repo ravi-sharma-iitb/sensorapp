@@ -8,29 +8,34 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 public class Sensor_out extends ActionBarActivity {
 
     protected String sensorUID;
+    protected String tankname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensor_out);
         sensorUID = getIntent().getStringExtra("sUID");
-        SQLiteDatabase db = (new DatabaseHelper(this)).getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM wtrlvl WHERE UID = ?",
-                new String[]{(sensorUID)});
-
-        if (cursor.getCount() == 1)
+        tankname = getIntent().getStringExtra("tNAME");
         {
-            cursor.moveToFirst();
+            //cursor.moveToFirst();
+            final TextView textViewToChange = (TextView) findViewById(R.id.sensorTankName);
+            textViewToChange.setText(sensorUID+"  "+tankname);
             WebView webView = (WebView) findViewById(R.id.webview);
+            webView.setWebViewClient(new WebViewClient());
             WebSettings webSettings = webView.getSettings();
             webSettings.setJavaScriptEnabled(true);
-            webView.loadUrl("file:///OurServer.com/"+sensorUID+".html");
+            webView.loadUrl("http://dhjdfdjafhljadk.com/"+sensorUID+".html");
+
         }
+
      }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

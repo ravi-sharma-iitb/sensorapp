@@ -1,6 +1,7 @@
 package sensorapp.waterlvl.waterlevelremoteclient;
 
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.MenuItem;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class add_sensor extends ActionBarActivity {
@@ -15,6 +17,7 @@ public class add_sensor extends ActionBarActivity {
     protected SQLiteDatabase db;
     protected EditText Tanksensor;
     protected EditText SensorCode;
+    protected Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

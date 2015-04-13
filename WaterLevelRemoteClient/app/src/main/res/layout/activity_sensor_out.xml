@@ -9,6 +9,7 @@
     android:paddingRight="20dp"
     android:paddingTop="15dp"
     android:weightSum="1">
+
     <WebView
         android:layout_width="match_parent"
         android:id="@+id/webview"
@@ -23,8 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Water Tank: 12"
-        android:id="@+id/textView"
+        android:id="@+id/sensorTankName"
         android:layout_alignBottom="@+id/webview"
         android:layout_centerHorizontal="true" />
 

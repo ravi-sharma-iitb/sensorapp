@@ -47,6 +47,7 @@ public class db extends ListActivity {
         Intent intent = new Intent(this, Sensor_out.class);
         Cursor cursor = (Cursor) adapter.getItem(position);
         intent.putExtra("sUID", cursor.getString(cursor.getColumnIndex("UID")));
+        intent.putExtra("tNAME", cursor.getString(cursor.getColumnIndex("TANK_NAME")));
         startActivity(intent);
     }
 
